@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 /* Acesta este conținutul noului fișier: mesajcuploaie.css */
 
 body.rain-page-test {
@@ -7,7 +9,7 @@ body.rain-page-test {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  font-family: "Comic Sans MS", cursive;
+  font-family: "Patrick Hand", cursive;
   box-sizing: border-box;
   overflow: hidden; /* Important pentru ploaie */
 }
