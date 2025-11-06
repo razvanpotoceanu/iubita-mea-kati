@@ -1,0 +1,1727 @@
+/* ------------------------------------------------- */
+/* 💅 style.css - COD COMPLET ȘI ACTUALIZAT         */
+/* ------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", cursive;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  /* Fundalul implicit (dacă o pagină nu are clasa ei specifică) */
+  background: linear-gradient(135deg, #ff9ff3, #f368e0, #ff6b81);
+  min-height: 100vh;
+}
+
+/* Stilizare comună pentru containerele de pe paginile secundare */
+.container {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Meniu Principal (index.html) --- */
+body.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container { padding: 20px; }
+.menu-title { 
+  font-size: 2.5em; 
+  margin-bottom: 30px; 
+  color: #fff; 
+  text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+}
+.menu-buttons {
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  align-items: center;
+  max-height: 60vh; /* Permite scroll pe ecrane mici */
+  overflow-y: auto;
+  padding: 10px;
+}
+.menu-button {
+  display: block;
+  width: 80%; 
+  max-width: 300px;
+  padding: 15px;
+  color: white;
+  background: linear-gradient(135deg, #ff6b81, #f368e0);
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+.menu-button:hover { 
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5); 
+}
+/* Stil pentru butoanele dezactivate */
+.menu-button.disabled {
+  background: linear-gradient(135deg, #aaa, #888);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.menu-button.disabled:hover {
+  transform: scale(1); /* Fără efect de mărire */
+}
+.note { 
+  margin-top: 30px; 
+  font-style: italic; 
+  font-size: 0.9em; 
+  opacity: 0.8; 
+}
+
+/* --- Pagina Timpul cu tine (timpulcutine.html) --- */
+body.timpulcutine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo {
+  width: 220px; height: 220px; border-radius: 50%;
+  object-fit: cover; margin: 20px 0;
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+  border: 4px solid white;
+}
+#timer {
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px; padding: 20px;
+  display: inline-block;
+  margin-top: 15px;
+}
+#timer p { margin: 5px 0; font-size: 1.1em;}
+
+/* --- Slider dragoste (sliderdragoste.html) --- */
+body.sliderdragoste .container.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrează vertical pe pagină */
+  min-height: 100vh;
+  padding-top: 0; 
+}
+
+.slider-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+/* CORECTURA MAJORĂ AICI: Stilizare pentru sliderul vertical */
+#loveSlider {
+  -webkit-appearance: none;
+  appearance: none; /* Resetează stilul implicit */
+  
+  /* Setăm dimensiunile corecte pentru verticală */
+  width: 16px;  /* Lățimea este GROSIMEA barei */
+  height: 300px; /* Înălțimea este LUNGIMEA barei */
+  
+  border-radius: 10px;
+  /* Fundalul implicit (de jos în sus) */
+  background: linear-gradient(to top, #ff6b81 50%, #f368e0 50%);
+  cursor: pointer;
+  
+  /* PROPRIETATEA MAGICĂ pentru Chrome/Safari/Edge */
+  -webkit-appearance: slider-vertical;
+}
+
+/* Stilizare "bulină" (thumb) pentru WebKit (Chrome, etc.) */
+#loveSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px; 
+  height: 32px; 
+  background: #ff6b81; 
+  border-radius: 50%; 
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Stilizare "bulină" (thumb) pentru Firefox */
+#loveSlider::-moz-range-thumb {
+  width: 32px; 
+  height: 32px; 
+  background: #ff6b81; 
+  border-radius: 50%; 
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Stilizare "bară" (track) pentru Firefox */
+#loveSlider::-moz-range-track {
+  background: linear-gradient(to top, #ff6b81 50%, #f368e0 50%);
+  width: 16px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.message { 
+  margin-top: 15px; 
+  font-size: 1.2em; 
+  font-weight: bold; 
+  color: #fff; 
+  text-shadow: 0 0 5px #000; 
+}
+
+/* --- Pagina Quiz (quiz.html) --- */
+body.quiz-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-top: 50px;
+}
+.quiz-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #333;
+    width: 90%;
+    max-width: 600px;
+}
+.quiz-container .title {
+    color: #8e44ad;
+    margin-bottom: 25px;
+}
+.question-text {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #8e44ad;
+}
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.quiz-option-button {
+    padding: 12px;
+    background: linear-gradient(90deg, #ff6b81, #f368e0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s, transform 0.1s;
+}
+.quiz-option-button:hover:not(:disabled) {
+    background: linear-gradient(90deg, #f368e0, #ff6b81);
+    transform: scale(1.02);
+}
+.quiz-option-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.feedback-message {
+    min-height: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.next-button {
+    padding: 12px 25px;
+    background: #2ecc71; 
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: bac kground 0.3s;
+    margin-top: 10px;
+}
+.next-button:hover {
+    background: #27ae60;
+}
+.score-display {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #8e44ad;
+    font-weight: bold;
+}
+.final-photo { 
+  max-width: 90%; 
+  border-radius: 15px; 
+  margin: 20px 0;
+}
+
+/* --- Inimioare animate (Comun pentru Timpul cu tine) --- */
+.hearts { 
+  position: fixed; 
+  top:0; left:0; 
+  width:100%; height:100%;
+  pointer-events:none; 
+  overflow:hidden; 
+  z-index:10; 
+}
+/* Inimioarele care plutesc pe pagina Timpul cu Tine */
+.hearts .heart {
+  position:absolute; 
+  color:#ff6b81; 
+  animation: float 4s ease-in forwards;
+  opacity:0.9;
+}
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.9; }
+  50% { transform: translateY(50vh) scale(1.2); }
+  100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+}
+
+/* NOU: Stilizare pentru inimioarele din Slider Dragoste (apar și dispar) */
+.hearts.slider-hearts .heart {
+  animation: fade-out-heart 1.5s ease-out forwards;
+  opacity: 1;
+  position: absolute;
+  color:#ff6b81;
+  font-size: (12 + Math.random()*18) + "px"; /* dimensiune variabilă, va fi setată în JS */
+  pointer-events: none; /* Nu interacționează cu mouse-ul */
+}
+
+@keyframes fade-out-heart {
+  0% { opacity: 1; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* --- Buton înapoi (Comun) --- */
+.back-button {
+  position: fixed; top: 20px; left: 20px;
+  padding: 8px 12px; font-size: 0.9em;
+  color: white; 
+  background: linear-gradient(135deg, #f368e0, #ff6b81);
+  text-decoration: none; 
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  z-index: 20; 
+}
+.back-button:hover { transform: scale(1.1); }
+
+
+/* --- Mesajul Zilei (mesajulzilei.html) --- */
+
+body.mesajulzilei-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.mesajulzilei-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    color: #333;
+    max-width: 450px;
+    margin-top: -50px; /* Ridică puțin conținutul */
+    position: relative;
+    z-index: 5;
+}
+
+.mesajulzilei-container .title {
+    color: #f368e0;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.message-box {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background: #fff0f5; /* Un roz pal */
+    border-radius: 15px;
+    border: 2px solid #ff6b81;
+    opacity: 0; /* Setat inițial pe 0 pentru fade-in */
+}
+
+#message-text {
+    font-size: 1.4em;
+    font-style: italic;
+    font-weight: bold;
+    color: #8e44ad; /* Mov/Violet */
+}
+
+.data-text {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --- Capsula Timpului (capsulatimpului.html) --- */
+
+body.capsulatimpului-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aliniere sus pentru a vedea toate scrisorile */
+  padding-top: 50px;
+}
+
+.capsula-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+}
+
+.capsula-container .title {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.scrisoare {
+    border: 2px solid #ff6b81;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    background-color: #fff0f5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.scrisoare-titlu {
+    color: #ff6b81;
+    margin-top: 0;
+    font-size: 1.4em;
+    border-bottom: 1px dashed #f368e0;
+    padding-bottom: 10px;
+}
+
+.status-text {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Stilizare pentru conținutul blocat */
+.continut.blocat {
+    position: relative;
+    min-height: 150px; /* Asigură un spațiu vizibil */
+    overflow: hidden;
+    padding: 10px;
+}
+
+.continut.blocat p {
+    color: transparent; /* Face textul invizibil */
+    user-select: none; /* Nu permite selectarea textului */
+}
+
+/* Efectul de 'blocaj' */
+.continut.blocat::before {
+    content: "🔒 Scrisoarea este sigilată. Revino la data de deblocare!";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(142, 68, 173, 0.95); /* Culoare violet opacă */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Stilizare pentru conținutul deblocat */
+.continut.deblocat {
+    border-left: 5px solid #2ecc71; /* Linie verde de accent */
+    padding-left: 15px;
+}
+
+.continut.deblocat p {
+    color: #333; /* Textul devine vizibil */
+    font-style: italic;
+}
+
+
+/* --- Melodia Noastră (melodianoastra.html) --- */
+
+body.melodie-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.melodie-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+}
+
+.melodie-container .title {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.melodie-button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #f368e0, #ff6b81);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.melodie-button:hover {
+    transform: scale(1.05);
+}
+
+.melodie-button.playing {
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* Verde când melodia rulează */
+}
+
+.lyrics-box {
+    margin-top: 30px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 3px dashed #f368e0;
+    border-radius: 15px;
+    background: #fff;
+}
+
+.lyrics-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #8e44ad;
+    transition: opacity 0.3s ease-in-out;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+
+.slideshow-container {
+  max-width: 280px; /* <--- Aceasta face pozele mici */
+  max-height: 280px; /* <--- Aceasta face pozele mici */
+  position: relative;
+  margin: 0 auto 25px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+  aspect-ratio: 1/1;
+  /* ... alte proprietăți pentru centrare ... */
+}
+
+.mySlides {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* <--- Asigură că imaginea umple pătratul de 280x280 */
+  /* ... alte proprietăți ... */
+}
+
+/* --- Puzzle Foto (puzzlefoto.html) --- */
+
+body.puzzle-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aliniere sus pentru a vedea toate piesele */
+  padding-top: 50px;
+}
+
+.puzzle-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 400px; /* Lățimea maximă a întregului container */
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.puzzle-container .title {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+.puzzle-container .intro-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Grila unde se plasează piesele */
+.puzzle-grid {
+    width: 100%;
+    /*max-width: 360px;  Lățimea grilei (3 x 120px) */
+    aspect-ratio: 1/1; /* Face grila pătrată */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 coloane egale */
+    grid-template-rows: repeat(3, 1fr); /* 3 rânduri egale */
+    border: 3px solid #ff6b81;
+    border-radius: 10px;
+    overflow: hidden; 
+    background-color: #fff0f5; /* Roz pal de fundal */
+}
+
+/* Sloturile goale din grilă */
+.puzzle-slot {
+    border: 1px dashed rgba(243, 104, 224, 0.5); /* Roz punctat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.puzzle-slot.drag-over {
+    background-color: rgba(142, 68, 173, 0.2); /* Efect vizual la drag-over */
+}
+
+/* Containerul de jos, cu piesele amestecate */
+.puzzle-pieces-container {
+    width: 100%;
+    /*max-width: 360px; */
+    min-height: 120px; 
+    background-color: #f0e6fa; /* Lavandă deschis */
+    border: 2px dashed #8e44ad;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Spațiu între piesele de jos */
+}
+
+/* Piesa individuală de puzzle */
+.puzzle-piece {
+    /* Piesele din containerul de jos vor avea o dimensiune fixă */
+    width: 100px;
+    height: 100px;
+    
+    cursor: grab;
+    background-repeat: no-repeat;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease, width 0.1s ease, height 0.1s ease;
+}
+
+/* Când piesa e în grila de sus (în slot) */
+.puzzle-slot .puzzle-piece {
+    /* Piesa se va extinde pentru a umple slotul perfect */
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none; /* Fără umbră când e în grilă */
+}
+
+
+.puzzle-piece.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Mesajul de final */
+.win-message {
+    margin-top: 30px;
+    background: #e6ffe6; /* Verde deschis pentru mesajul de succes */
+    color: #28a745;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #28a745;
+    text-align: center;
+}
+.win-message h2 {
+    color: #28a745;
+    margin-top: 0;
+}
+.win-message p {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #333;
+}
+.final-photo-puzzle {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+
+/* --- Amintiri care se Aprind (amintiriaprind.html) --- */
+
+body.amintiri-page {
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  overflow: hidden; /* Ascunde scrollbar-ul */
+}
+
+.dark-room {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at center, 
+    rgba(10, 10, 20, 1) 0%, 
+    rgba(0, 0, 0, 1) 100%);
+}
+
+.dark-room .intro-text {
+  padding-top: 60px;
+  font-size: 1.2em;
+  font-style: italic;
+  opacity: 0.6;
+  color: #f0e6fa;
+}
+/* Scânteile (Punctele) */
+.spark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 224, 0.7); /* O culoare de lumină palidă */
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 224, 0.5),
+              0 0 5px 2px rgba(255, 255, 255, 1) inset;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: pulse 2.5s infinite ease-in-out;
+  z-index: 5; /* Asigură că sunt deasupra fundalului, dar sub lightbox */
+}
+
+.spark:hover {
+  transform: scale(1.3);
+}
+
+/* POZIȚIONARE NOUĂ, SIGURĂ PENTRU TELEFON (MOBILE-SAFE) */
+.spark1 {
+  top: 20%;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+.spark2 {
+  top: 35%;
+  left: 75%;
+}
+.spark3 {
+  top: 80%;
+  left: 50%;
+  animation-delay: 1s;
+}
+.spark4 {
+  top: 15%;
+  left: 60%;
+  animation-delay: 0.2s;
+}
+.spark5 {
+  top: 70%;
+  left: 85%; /* Limita maximă sigură */
+  animation-delay: 1.2s;
+}
+.spark6 {
+  top: 50%;
+  left: 15%; /* Limita minimă sigură */
+}
+.spark7 {
+  top: 30%;
+  left: 45%;
+  animation-delay: 0.8s;
+}
+.spark8 {
+  top: 90%;
+  left: 70%;
+  animation-delay: 0.4s;
+}
+.spark9 {
+  top: 65%;
+  left: 30%;
+  animation-delay: 1.5s;
+}
+.spark10 {
+  top: 10%;
+  left: 10%; /* Limita minimă sigură */
+}
+
+/* Animația de pulsare a scânteii */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+
+/* Fereastra de Amintire (Lightbox) */
+.memory-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none; /* Ascuns inițial */
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.memory-lightbox.visible {
+  opacity: 1;
+}
+
+.memory-content {
+  position: relative;
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 0 40px 10px rgba(255, 255, 224, 0.5); /* Efectul de "lumină" aprinsă */
+  text-align: center;
+}
+
+.close-memory-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.5em;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+.close-memory-btn:hover {
+  color: #333;
+}
+
+.memory-image {
+  width: 100%;
+  max-height: 300px; /* Limitează înălțimea pozei */
+  object-fit: contain; /* Asigură că se vede toată poza */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.memory-text {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+
+/* --- Mesaje în Baloane (baloane.html) --- */
+
+body.baloane-page {
+  /* Fundalul "cer" - un gradient de la albastru deschis la roz */
+  background: linear-gradient(to bottom, #87CEEB 20%, #ffdde1 100%);
+  min-height: 100vh;
+  overflow: hidden; /* Ascunde baloanele care ies din ecran */
+}
+
+.sky-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sky-container .title,
+.sky-container .intro-text {
+  position: relative;
+  z-index: 5; /* Să fie deasupra baloanelor */
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.sky-container .title {
+  padding-top: 40px;
+  font-size: 2.5em;
+}
+.sky-container .intro-text {
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* Stilul balonului */
+.balloon {
+  position: absolute;
+  bottom: -150px; /* Începe de sub ecran */
+  width: 80px;
+  height: 100px;
+  background-color: #ff6b81; /* Culoare implicită */
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: inset -5px -5px 10px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  animation: floatUp linear infinite;
+  z-index: 1;
+}
+
+/* Ața balonului */
+.balloon::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 25px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Animația de plutire */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50vh) rotate(15deg); /* Se mișcă stânga-dreapta */
+  }
+  100% {
+    transform: translateY(-110vh) rotate(-10deg); /* Ajunge deasupra ecranului */
+  }
+}
+
+/* Animația de spargere (pop) */
+.balloon.popped {
+  animation: none; /* Oprește plutirea */
+  transition: transform 0.3s ease-out, opacity 0.5s ease-out;
+  transform: scale(1.3);
+  opacity: 0;
+}
+
+/* Fereastra Modal pentru Mesaj */
+.message-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.message-modal.visible {
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  color: #333;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 350px;
+  box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+  text-align: center;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.5em;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+.close-modal-btn:hover {
+  color: #333;
+}
+
+.modal-text {
+  font-size: 1.4em;
+  font-weight: bold;
+  font-style: italic;
+  color: #8e44ad;
+  margin: 0;
+}
+
+
+/* Stil pentru mesajul final (Baloane) */
+.final-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+.final-message h2 {
+  color: #f368e0; /* Roz */
+  margin-top: 0;
+  font-size: 1.8em;
+}
+.final-message p {
+  color: #555;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+
+/* --- Countdown (countdown.html) --- */
+
+body.countdown-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.countdown-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.countdown-container .title {
+    color: #8e44ad;
+    margin-bottom: 25px;
+}
+
+.timer-box {
+  background: #fff0f5; /* Roz pal */
+  border: 3px solid #ff6b81;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.timer-intro, .timer-outro {
+  font-size: 1.2em;
+  color: #555;
+  margin: 0;
+}
+
+.days-left {
+  font-size: 6em; /* Mărime mare pentru număr */
+  font-weight: bold;
+  color: #ff6b81; /* Rozul principal */
+  margin: 10px 0;
+  line-height: 1.1;
+}
+
+.data-tinta {
+  margin-top: 15px;
+  font-style: italic;
+  color: #aaa;
+  font-size: 0.9em;
+}
+
+
+
+/* --- Mesaje care se citesc o singură dată (mesajeunice.html) --- */
+
+body.mesaje-unice-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aliniere sus */
+  padding-top: 50px;
+}
+
+.mesaje-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 550px; /* Lățime mai mare pentru mesaje */
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mesaje-container .title {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+.mesaje-container .intro-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    text-align: center;
+    max-width: 450px;
+}
+
+.message-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.message-button {
+  background-color: #ff6b81; /* Roz */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 120px;
+}
+
+.message-button:hover:not(.read) {
+  background-color: #e65a70;
+  transform: translateY(-2px);
+}
+
+.message-button.read {
+  background-color: #cccccc; /* Gri pentru mesajele citite */
+  color: #888888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.message-display {
+  min-height: 150px; /* Asigură un spațiu constant */
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  transition: opacity 0.5s ease-out; /* Pentru fade-in/out */
+  opacity: 0; /* Ascuns inițial */
+  background: #fff0f5; /* Fundal roz deschis */
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(243, 104, 224, 0.2);
+  display: flex;
+  
+  /* MODIFICĂRI AICI: */
+  flex-direction: column; /* Pune elementele unul sub altul */
+  justify-content: space-between; /* Întinde textul și butonul */
+  align-items: center; /* Centrează pe orizontală */
+}
+
+.message-display.fade-in {
+  opacity: 1;
+}
+
+.message-display.fade-out {
+  opacity: 0;
+}
+
+.current-message {
+  margin: 0;
+  padding: 10px; /* Spațiu pentru text */
+  font-size: 1.3em;
+  font-style: italic;
+  color: #8e44ad;
+  flex-grow: 1; /* Permite textului să ocupe spațiul disponibil */
+  display: flex;
+  align-items: center;
+}
+
+/* Secțiunea Finală de Revelare */
+.final-reveal {
+  margin-top: 40px;
+  background: #e6ffe6; /* Verde deschis */
+  border: 2px solid #28a745;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.final-reveal h2 {
+  color: #28a745;
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.final-reveal p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  background-color: #00d2d3; /* Turcoaz */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #00b0b1;
+  transform: translateY(-2px);
+}
+
+/* STIL NOU PENTRU BUTONUL DE CONFIRMARE */
+.confirm-read-button {
+  background-color: #2ecc71; /* Verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 15px; /* Spațiu între text și buton */
+  transition: background-color 0.3s ease;
+}
+
+.confirm-read-button:hover {
+  background-color: #27ae60;
+}
+
+
+/* --- Pupic Magic (pupicmagic.html) --- */
+
+body.pupic-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Important pentru particule */
+}
+
+.pupic-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.pupic-container .title {
+    color: #ff6b81; /* Roz */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.kiss-button {
+  background: linear-gradient(135deg, #ff6b81, #f368e0);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px; /* Buton rotunjit */
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(243, 104, 224, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kiss-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(243, 104, 224, 0.7);
+}
+
+.kiss-button:active {
+  transform: scale(0.95); /* Efect la apăsare */
+}
+
+.kiss-message {
+  margin-top: 30px;
+  font-size: 1.3em;
+  font-style: italic;
+  color: #8e44ad;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.kiss-message.visible {
+  opacity: 1;
+}
+
+/* Containerul pentru particule (peste tot ecranul) */
+#particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Nu blochează click-ul */
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  font-size: 2.5em;
+  animation: explode 2s ease-out forwards;
+}
+
+/* Animația de "explozie" */
+@keyframes explode {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    /* Folosește variabilele setate în JS */
+    transform: translate(var(--x-dir), var(--y-dir)) rotate(var(--rotation)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+/* --- Bătăile Inimii (bataiinimii.html) --- */
+
+body.heartbeat-page {
+  /* Un fundal roz mai întunecat pentru intimitate */
+  background: linear-gradient(135deg, #ff6b81, #c44569);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.heartbeat-container {
+    background: rgba(255, 255, 255, 0.1); /* Container semi-transparent */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.heartbeat-container .title {
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.touch-area {
+  width: 200px;
+  height: 200px;
+  border: 5px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 50%; /* Zonă de atingere circulară */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none; /* Previne selectarea textului la apăsare */
+  transition: background-color 0.3s ease;
+}
+
+.touch-area:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.heart-icon {
+  font-size: 5em; /* 💓 */
+  color: #ff6b81;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.touch-instruction {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mesajul care apare */
+.heart-message {
+  margin-top: 25px;
+  font-size: 1.3em;
+  font-style: italic;
+  color: #fff;
+  opacity: 0; /* Ascuns inițial */
+  transition: opacity 0.5s ease-in-out;
+  min-height: 60px; /* Spațiu rezervat */
+}
+
+.heart-message.visible {
+  opacity: 1;
+}
+
+/* Animația de Pulsare */
+.heart-icon.pulsing {
+  animation: pulse-heart 0.8s infinite ease-in-out;
+}
+
+@keyframes pulse-heart {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 35px 15px rgba(255, 107, 129, 0.9); /* Roz mai intens */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+
+/* --- Amintiri cu Voce (amintirivoce.html) --- */
+
+body.galerie-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aliniere sus */
+  padding-top: 50px;
+}
+
+.galerie-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #333;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.galerie-container .title {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+.galerie-container .intro-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Grila de poze */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 poze pe rând */
+  gap: 15px;
+}
+
+.grid-thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1; /* Păstrează pozele pătrate */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Overlay-ul cu iconița de sunet */
+.thumb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.grid-thumbnail:hover .thumb-overlay {
+  opacity: 1;
+}
+
+/* Fereastra Lightbox pentru Galerie (similară cu celelalte) */
+.gallery-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-lightbox.visible {
+  opacity: 1;
+}
+
+.gallery-content {
+  position: relative;
+  background: #fff;
+  color: #333;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.close-gallery-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.5em;
+  color: #aaa;
+  cursor: pointer;
+  line-height: 1;
+}
+.close-gallery-btn:hover {
+  color: #333;
+}
+
+.gallery-photo {
+  width: 100%;
+  max-height: 400px; 
+  object-fit: contain; 
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.gallery-caption {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+
+/* --- Mesaj cu Lacrimi (mesajcuploaie.html) --- */
+
+body.rain-page {
+  /* Fundalul închis, ca de ploaie */
+  background: linear-gradient(to top, #485461 0%, #28313b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Foarte important pentru animația de ploaie */
+  position: relative; /* Pentru a poziționa canvasul de ploaie */
+}
+
+/* Containerul principal al mesajului */
+.rain-container {
+    background: rgba(255, 255, 255, 0.85); /* FUNDAL MULT MAI ALB (OPAC) */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #111; /* Culoare text implicită ÎNCHISĂ */
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    z-index: 10; /* Asigură-te că mesajul este deasupra ploii */
+    text-align: center;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+}
+
+.rain-container .title {
+    color: #333; /* CULOARE ÎNCHISĂ PENTRU TITLU */
+    margin-bottom: 25px;
+    text-shadow: none; /* Scoatem umbra albă */
+    font-size: 2.5em;
+}
+
+.message-box {
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.6;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #111; /* CULOARE FOARTE ÎNCHISĂ */
+}
+
+.message-box p {
+    margin: 10px 0;
+    color: #111; /* Asigură că textul e închis */
+}
+
+.message-box .signature {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #333; /* Culoare închisă pentru semnătură */
+}
+
+/* --- Promisiunea Mea (promisiune.html) --- */
+
+body.promisiune-page {
+  /* Un fundal de noapte adânc, elegant */
+  background: linear-gradient(to bottom, #020111 0%, #191621 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; 
+  position: relative;
+}
+
+/* Containerul principal al mesajului */
+.promisiune-container {
+    background: transparent; /* Fără fundal, doar textul */
+    color: #fff;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    z-index: 10; 
+    text-align: center;
+}
+
+/* Mesajul poetic */
+.promisiune-text {
+  font-size: 1.6em;
+  font-family: 'Georgia', 'Times New Roman', serif; /* Un font mai elegant */
+  font-style: italic;
+  line-height: 1.7;
+  color: #ddd; /* O culoare albă, dar blândă */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  
+  /* Animația de apariție (fade-in) a textului */
+  opacity: 0;
+  animation: fadeInText 3s ease-in 0.5s forwards;
+}
+
+.promisiune-text p {
+  margin: 20px 0;
+}
+
+.promisiune-text .emphasis {
+  font-size: 1.2em; /* Mărește puțin partea importantă */
+  color: #fff;
+  font-weight: bold;
+}
+
+.promisiune-text .final-line {
+  color: #ff9ff3; /* Un accent de roz pal */
+  font-weight: bold;
+}
+
+/* Animația de fade-in a textului */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --- Efectul de Stele (pentru promisiune.html) --- */
+
+#stars-canvas {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 1; /* În spatele mesajului */
+}
+
+.star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%; 
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+  animation: twinkle linear infinite alternate;
+}
+
+/* Animația de pâlpâire a stelelor */
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}

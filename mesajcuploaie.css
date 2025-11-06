@@ -1,0 +1,105 @@
+/* Acesta este conținutul noului fișier: mesajcuploaie.css */
+
+body.rain-page-test {
+  background: #28313b; /* Fundalul închis specific paginii */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Comic Sans MS", cursive;
+  box-sizing: border-box;
+  overflow: hidden; /* Important pentru ploaie */
+}
+
+.rain-container-test {
+  background: rgba(255, 255, 255, 0.9); /* Fundal alb, aproape opac */
+  color: #000; /* Text negru */
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  /* --- Z-INDEX FIX --- */
+  position: relative;
+  z-index: 10; /* Mesajul stă DEASUPRA ploii */
+}
+
+.rain-container-test .title {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+}
+
+.message-box-test {
+  background: #f9f9f9; /* Un gri foarte deschis */
+  border: 1px dashed #ff6b81;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.message-box-test p {
+  color: #111; /* Text negru, imposibil de ratat */
+  font-size: 1.4em;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.message-box-test .signature {
+  font-size: 1em;
+  font-style: normal;
+  color: #555;
+  margin-top: 25px;
+}
+
+/* Stil pentru butonul de înapoi (luat din main style) */
+.back-button-test {
+  position: fixed; 
+  top: 20px; 
+  left: 20px;
+  padding: 8px 12px; 
+  font-size: 0.9em;
+  color: white; 
+  background: linear-gradient(135deg, #f368e0, #ff6b81);
+  text-decoration: none; 
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  
+  /* --- Z-INDEX FIX --- */
+  z-index: 20; /* Butonul stă deasupra la absolut tot */
+}
+.back-button-test:hover { 
+  transform: scale(1.1); 
+}
+
+/* --- EFECTUL DE PLOAIE (REACTIVAT ȘI ADĂUGAT AICI) --- */
+
+#rain-canvas {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Nu blochează interacțiunea */
+  
+  /* --- Z-INDEX FIX --- */
+  z-index: 1; /* Ploaia stă ÎN SPATELE mesajului */
+}
+
+.raindrop {
+  position: absolute;
+  background: rgba(173, 216, 230, 0.6); 
+  border-radius: 50%; 
+  transform: translateY(-100vh); 
+  animation: fall linear infinite;
+}
+
+/* Animația de cădere */
+@keyframes fall {
+  to {
+    transform: translateY(100vh); /* Cade până sub ecran */
+  }
+}
