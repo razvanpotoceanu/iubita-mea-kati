@@ -109,8 +109,8 @@ const allQuizQuestions = [
   },
     {
     question: "Ce îți place cel mai mult să primești de la mine?",
-    options: ["Flori", "Mâncare", "Scrisori"],
-    answer: "Scrisori" // Schimbă cu răspunsul corect
+    options: ["Flori", "Imbratisari", "Scrisori". "Tot"],
+    answer: "Tot" // Schimbă cu răspunsul corect
   },
   {
     question: "Ce simt cel mai des lângă tine?",
@@ -222,4 +222,5 @@ function showFinalResult() {
   feedback.textContent = "";
   nextButton.style.display = 'none';
   scoreDisplay.parentElement.style.display = 'none'; // Ascunde contorul de scor
+
 }
