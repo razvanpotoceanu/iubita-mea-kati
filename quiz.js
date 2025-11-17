@@ -213,7 +213,7 @@ nextButton.addEventListener('click', () => {
 });
 
 function showFinalResult() {
-  questionText.textContent = "FELICITĂRI! Testul s-a terminat!";
+  questionText.textContent = "FELICITĂRI BABYGIRL! Quiz-ul s-a terminat!";
   optionsContainer.innerHTML = `
     <img src="img/poza_finala_quiz.jpg" alt="Poza noastră de final" class="final-photo">
     <h2>Ai obținut ${score} din ${totalQuestions} puncte!</h2>

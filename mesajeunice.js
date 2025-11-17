@@ -2,16 +2,16 @@
 
 // --- BAZA DE DATE PENTRU MESAJE ---
 let secretMessages = [
-    { id: 1, text: "Adevărul e că de când ai apărut, lumea mea e mai blândă. Și dacă tot ce am ar dispărea, aș vrea doar să rămână vocea ta.", read: false },
-    { id: 2, text: "Fiecare zi cu tine este o mică aventură pe care nu vreau să o ratez.", read: false },
-    { id: 3, text: "Când râzi, simt că se aprinde un soare în mine. E cel mai frumos sunet.", read: false },
-    { id: 4, text: "Nu există problemă prea mare când știu că suntem amândoi în asta.", read: false },
-    { id: 5, text: "Ești visul meu devenit realitate, cel mai frumos și nebun vis.", read: false },
-    { id: 6, text: "Îți mulțumesc pentru răbdarea și iubirea ta infinită. Înseamnă totul.", read: false },
-    { id: 7, text: "Mă inspiri să fiu o persoană mai bună în fiecare zi. Ești magia mea.", read: false },
-    { id: 8, text: "Chiar și în tăcere, prezența ta îmi umple sufletul de liniște și fericire.", read: false },
-    { id: 9, text: "Nu mi-aș dori pe nimeni altcineva alături în călătoria asta nebună a vieții.", read: false },
-    { id: 10, text: "Tu ești acasă pentru mine, oriunde am fi. Te iubesc mai mult decât pot spune.", read: false }
+    { id: 1, text: "Adevarul e ca de cand ai aparut, mi-ai luminat viata. Si daca tot ce am ar disparea, tot ce mi-as dori ar fi sa ramai doar tu, iubito.", read: false },
+    { id: 2, text: "Atunci cand zambesti, simt cum ma cuprinde un val de iubire. E cel mai frumos lucru, esti cea mai frumoasa si minunata femeie.", read: false },
+    { id: 3, text: "Esti visul meu devenit realitate, cel mai nebun si mai frumos vis.", read: false },
+    { id: 4, text: "Ma inspiri sa fiu o persoana mai buna in fiecare zi. Esti cel mai bun model din viata mea. ", read: false },
+    { id: 5, text: "Chiar si in tacere, prezenta ta imi umple sufletul de iubire.", read: false },
+    { id: 6, text: "Oriunde am fi, tu pentru mine esti acasa. Te iubesc mai mult decat pot spune. ", read: false },
+    { id: 7, text: "Mi-e foarte dor de tine mereu cand esti departe de mine, abia astept sa vina urmatoarea data in care ne vedem", read: false },
+    { id: 8, text: "Iti multumesc pentru iubirea ta infinita si pentru dedicarea in relatia noastra. ", read: false },
+    { id: 9, text: "Oricat de obosit as fi, tu imi dai mereu energie sa merg mai departe, fiindca am pentru ce sa lupt. ", read: false },
+    { id: 10, text: "Tu esti totul meu, tu esti tot ce mi-am putut inchipui vreodata ca inseamna iubirea", read: false }
 ];
 
 // --- Referințe DOM ---

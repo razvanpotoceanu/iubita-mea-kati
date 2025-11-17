@@ -5,43 +5,43 @@
 const memories = {
     "1": {
         image: "img/amintire1.jpg", 
-        text: "Aici ne-am ținut prima oară de mână. Am simțit că totul e în regulă în lume. ❤️"
+        text: "Primul KFC nu se uita niciodata❤️"
     },
     "2": {
         image: "img/amintire2.jpg", 
-        text: "Aici ai râs până ai plâns la o glumă proastă de-a mea. Zâmbetul tău a luminat totul. 😂"
+        text: "Cand ne-am facut tatuaje la Untold.😂"
     },
     "3": {
         image: "img/amintire3.jpg", 
-        text: "Momentul ăsta. Aici am știut că ești pentru totdeauna. Și nu aș schimba o secundă. 🥰"
+        text: "Cand am luat pranzul in parcul de langa Turnul Eiffel. Tu ai mancat minunatul Acai Bowl 🥰"
     },
     "4": {
         image: "img/amintire4.jpg", 
-        text: "Prima noastră cafea băută dimineața, în tăcere. A fost perfect."
+        text: "Achizitie Barcelona, pacat ca nu ne-au lasat in aeroport cu ea."
     },
     "5": {
         image: "img/amintire5.jpg", 
-        text: "Când am dansat în bucătărie la ora 2 noaptea. Doar noi și muzica."
+        text: "Cea mai scumpa poza, la restaurantul de lux."
     },
     "6": {
         image: "img/amintire6.jpg", 
-        text: "Prima zăpadă pe care am văzut-o împreună."
+        text: "The chosen one."
     },
     "7": {
         image: "img/amintire7.jpg", 
-        text: "Când m-ai susținut la acel examen greu. Ești cea mai bună."
+        text: "Cipru's baddies."
     },
     "8": {
         image: "img/amintire8.jpg", 
-        text: "Seara aceea de film când am adormit amândoi pe canapea."
+        text: "Turul UMFST❤️"
     },
     "9": {
         image: "img/amintire9.jpg", 
-        text: "Când mi-ai spus primul 'Te iubesc' și am simțit că plutesc."
+        text: "Sefa mea de promotie xoxo.❤️❤️❤️"
     },
     "10": {
         image: "img/amintire10.jpg", 
-        text: "Fiecare zi cu tine este o amintire pe care vreau să o aprind."
+        text: "Prima oara la patinoar impreuna.❤️"
     }
 };
 

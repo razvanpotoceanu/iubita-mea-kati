@@ -7,19 +7,37 @@ const voiceMemories = [
         id: 1,
         img: "img/galerie1.jpg",
         audio: "audio/voce1.mp3",
-        text: "„Aici mi-am dat seama că te iubesc. Erai atât de fericită...”"
+        text: "„Prima noastra poza impreuna”"
     },
     {
         id: 2,
         img: "img/galerie2.jpg",
         audio: "audio/voce2.mp3",
-        text: "„Zâmbeai și am știut că nu mai vreau pe altcineva în viața mea.”"
+        text: "„Minunatul tau majorat”"
     },
     {
         id: 3,
         img: "img/galerie3.jpg",
         audio: "audio/voce3.mp3",
-        text: "„Prima noastră poză serioasă... sau cel puțin am încercat! 😂 Te ador.”"
+        text: "„Turnul Eiffel si doi indragostiti”"
+    },
+    {
+        id: 4,
+        img: "img/galerie4.jpg",
+        audio: "audio/voce4.mp3",
+        text: "„Best of the best”"
+    },
+    {
+        id: 5,
+        img: "img/galerie5.jpg",
+        audio: "audio/voce5.mp3",
+        text: "„Untolders”"
+    },
+    {
+        id: 6,
+        img: "img/galerie6.jpg",
+        audio: "audio/voce6.mp3",
+        text: "„The chosen one”"
     }
     // Adaugă mai multe obiecte aici pe măsură ce adaugi poze/audio
 ];

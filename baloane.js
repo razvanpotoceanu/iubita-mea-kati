@@ -3,16 +3,16 @@
 // --- BAZA DE DATE PENTRU MESAJE (Motive de iubire) ---
 // Asigură-te că ai cel puţin la fel de multe mesaje câți 'totalBalloons'
 const balloonMessages = [
-    "Pentru că ai cel mai luminos zâmbet.",
-    "Pentru că mă faci să râd în hohote.",
-    "Pentru că ești atât de inteligentă.",
-    "Pentru că mă susții necondiționat.",
-    "Pentru că ești cea mai bună prietenă a mea.",
-    "Pentru că ai grijă de mine.",
-    "Pentru că aventurile cu tine sunt cele mai frumoase.",
-    "Pentru că mă faci să mă simt iubit.",
-    "Pentru că ești pur și simplu TU.",
-    "Pentru că viitorul cu tine sună perfect."
+    "Pentru ca ai cel mai frumos zambet din univers.",
+    "Pentru ca esti foarte hot.",
+    "Pentru ca esti foarte desteapta si muncitoare.",
+    "Pentru ca ma sustii neconditionat.",
+    "Pentru că esti cea mai buna tiktokerita.",
+    "Pentru ca ma asculti mereu.",
+    "Pentru ca ai cea mai frumoasa voce",
+    "Pentru ca ma faci sa ma simt foarte iubit.",
+    "Pentru că esti pur și simplu minunata.",
+    "Pentru că viitorul cu tine suna minunat."
 ];
 
 // --- Referințe DOM ---

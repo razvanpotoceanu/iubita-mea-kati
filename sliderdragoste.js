@@ -10,19 +10,19 @@ slider.addEventListener('input', () => {
 
   // Actualizează mesajul în funcție de valoare
   if (value == 100) {
-    message.textContent = "100%!! ❤️ Așa te iubesc și eu 🥰";
+    message.textContent = "100%!! ❤️ Așa de mult te iubesc și eu 🥰";
     spawnHearts(15); // Generează multe inimioare
   } else if (value >= 80) {
-    message.textContent = "80% 😍 Uau, ce iubire mare!";
+    message.textContent = "80% 😍 Începe să-mi placă!";
     spawnHearts(5);
   } else if (value >= 60) {
-    message.textContent = "60% 😘 Îmi place mult!";
+    message.textContent = "60% 😘 Parcă e mai bine..dar poți mai mult";
   } else if (value >= 40) {
-    message.textContent = "40% 🙂 Ha-ha, încă mai crește...";
+    message.textContent = "40% 🙂 Ha-ha, you're so funny";
   } else if (value >= 20) {
-    message.textContent = "20% 😅 Hmm, mai mult te rog!";
+    message.textContent = "20% 😅 Pe bune? Don't do that to me!";
   } else {
-    message.textContent = "0% 😭 Serios acum?";
+    message.textContent = "0% 😭 Hai no...";
   }
 
   // Actualizează fundalul sliderului (partea colorată)
