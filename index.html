@@ -3,34 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pentru Kati ❤️</title>
+  <title>Mini App Iubire ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="index">
-  <div class="menu-container">
-    <h1 class="menu-title">Alege o surpriză💖</h1>
 
-    <div class="menu-buttons">
-      <a href="timpulcutine.html" class="menu-button">🕰️ Timpul cu tine</a>
-      <a href="sliderdragoste.html" class="menu-button">💓 Cât de mult mă iubești?</a>
-      <a href="quiz.html" class="menu-button">🧠 Quiz despre noi</a>
-      
-      <a href="mesajulzilei.html" class="menu-button">💬 Mesajul zilei</a>
-      <a href="capsulatimpului.html" class="menu-button">🕯️ Capsula timpului</a>
-      <a href="melodianoastra.html" class="menu-button">🎶 Melodia noastră</a>
-      <a href="puzzlefoto.html" class="menu-button">🧩 Puzzle foto</a>
-      <a href="amintiriaprind.html" class="menu-button">🕯️ Amintiri care se aprind</a>
-      <a href="baloane.html" class="menu-button">🎈 Mesaje în baloane</a>
-      <a href="countdown.html" class="menu-button">⏳ Countdown aniversare</a>
-      <a href="mesajeunice.html" class="menu-button">💌 Mesaje care se citesc o singură dată</a>
-      <a href="pupicmagic.html" class="menu-button">💋 Pupic magic</a>
-      <a href="bataiinimii.html" class="menu-button">🫶 Bătăile inimii</a>
-      <a href="amintirivoce.html" class="menu-button">📸 Amintiri + vocea mea</a>
-      <a href="mesajcuploaie.html" class="menu-button">🌈 Mesaj cu lacrimi</a>
-      <a href="canddor.html" class="menu-button">🌻 Când îți e dor</a>
-      <a href="promisiune.html" class="menu-button">💖 Dacă mâine n-aș mai fi</a>
+  <div id="login-overlay">
+    <div class="login-box">
+      <h2>🔒 Acces Secret</h2>
+      <p style="margin-bottom: 15px;">Introdu parola noastră:</p>
+      <input type="password" id="passwordInput" class="password-input" placeholder="...">
+      <br>
+      <button onclick="checkPassword()" class="login-button">Deschide ❤️</button>
+      <p id="errorMsg" class="error-message">Parolă greșită! Mai încearcă 😋</p>
     </div>
-    
   </div>
+
+  <div id="main-app" style="display: none;">
+    
+    <div class="menu-container">
+      <h1 class="menu-title">Alege o surpriză 💖</h1>
+
+      <div class="menu-buttons">
+        <a href="timpulcutine.html" class="menu-button">🕰️ Timpul cu tine</a>
+        <a href="sliderdragoste.html" class="menu-button">💓 Cât de mult mă iubești?</a>
+        <a href="quiz.html" class="menu-button">🧠 Quiz despre noi</a>
+        <a href="mesajulzilei.html" class="menu-button">💬 Mesajul zilei</a>
+        <a href="capsulatimpului.html" class="menu-button">🕯️ Capsula timpului</a>
+        <a href="melodianoastra.html" class="menu-button">🎶 Melodia noastră</a>
+        <a href="puzzlefoto.html" class="menu-button">🧩 Puzzle foto</a>
+        <a href="amintiriaprind.html" class="menu-button">🕯️ Amintiri care se aprind</a>
+        <a href="baloane.html" class="menu-button">🎈 Mesaje în baloane</a>
+        <a href="countdown.html" class="menu-button">⏳ Countdown aniversare</a>
+        <a href="mesajeunice.html" class="menu-button">💌 Mesaje care se citesc o singură dată</a>
+        <a href="pupicmagic.html" class="menu-button">💋 Pupic magic</a>
+        <a href="bataiinimii.html" class="menu-button">🫶 Bătăile inimii</a>
+        <a href="amintirivoce.html" class="menu-button">📸 Amintiri + vocea mea</a>
+        <a href="mesajcuploaie.html" class="menu-button">🌈 Mesaj cu lacrimi</a>
+        <a href="canddor.html" class="menu-button">🌻 Când îți e dor</a>
+        <a href="promisiune.html" class="menu-button">💫 Promisiunea Mea Pentru Totdeauna</a>
+      </div>      
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const errorMsg = document.getElementById('errorMsg');
+      const overlay = document.getElementById('login-overlay');
+      const app = document.getElementById('main-app');
+
+      // VERIFICAREA PAROLEI
+      if (input.toLowerCase() === "katipui") { // Verifică parola (litere mici)
+        // Ascunde login-ul
+        overlay.style.display = 'none';
+        // Arată site-ul
+        app.style.display = 'block';
+        
+        // (Opțional) Salvăm în sesiune că s-a logat, ca să nu-i ceară parola la refresh
+        sessionStorage.setItem('isLoggedIn', 'true');
+      } else {
+        // Arată eroare
+        errorMsg.style.display = 'block';
+        // Scutură input-ul (mic efect vizual simplu)
+        document.getElementById('passwordInput').style.borderColor = 'red';
+      }
+    }
+
+    // Verificăm dacă e deja logată (când dă refresh sau vine de pe altă pagină)
+    window.onload = function() {
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        document.getElementById('login-overlay').style.display = 'none';
+        document.getElementById('main-app').style.display = 'block';
+      }
+    };
+  </script>
+
 </body>
 </html>
